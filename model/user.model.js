@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-const schema = mongoose.Schema({
+const schemat = mongoose.Schema({
     name:String,
     age:Number,
     department:String
 }, {versionKey:false});
-const Model = mongoose.model('item',schema );
-module.exports = {Model};
+const AuthModel = mongoose.model('item',schemat );
+module.exports = {AuthModel};
