@@ -2,6 +2,43 @@ const express = require("express");
 const { AuthModel } = require("../model/user.model");
 const user = express.Router();
 
+/**
+ * @swagger
+ * components:
+ *     schemas:
+ *         User:
+ *             type:object
+ *             properties:
+ *                 id:
+ *                     type:string
+ *                     description:this is auto generated
+ *                 name:
+ *                     type:string
+ *                     description:this is the name of the user
+ *                 age:
+ *                     type:integer
+ *                     description:this is the age of the user
+ *
+ */
+
+/**
+ * @swagger
+ * /user:
+ *   get:
+ *     summary:it is used to get the details of the users.
+ *     tags:[Users]
+ *     responses:
+ *       200:
+ *         description:the request was being made is successfull
+ *           content:
+ *             application/json
+ *               schema:
+ *                 type:array
+ *                   item:
+ *                     $res:"#components/schemas/User"
+ */
+
+
 user.get("/", async (req, res) => {
   console.log("first");
   try {
