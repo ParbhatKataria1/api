@@ -7,9 +7,9 @@ require('dotenv').config();
 // app.use(cors())
 app.use(express.json());
 
-app.use('/', user)
+app.use('/user', user)
 
-app.listen(process.env.port, async (req, res) => {
+app.listen(4500, async (req, res) => {
   try {
     await connection;
     console.log("server is running");
