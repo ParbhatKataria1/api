@@ -2,7 +2,7 @@ const express = require("express");
 const { AuthModel } = require("../model/user.model");
 const user = express.Router();
 
-user.get("/", async (req, res) => {
+user.get("/get", async (req, res) => {
   console.log("first");
   try {
     console.log("seocnd");
