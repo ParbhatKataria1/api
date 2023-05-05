@@ -12,8 +12,8 @@ app.use('/user', user)
 app.listen(4500, async (req, res) => {
   try {
     await connection;
-    console.log("server is running");
+    console.log("database is running");
   } catch (error) {
-    console.log("server is not running");
+    console.log("database is not running");
   }
 });
