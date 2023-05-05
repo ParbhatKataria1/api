@@ -3,8 +3,11 @@ const { AuthModel } = require("../model/user.model");
 const user = express.Router();
 
 user.get("/", async (req, res) => {
+  console.log("first");
   try {
+    console.log("seocnd");
     let data = await AuthModel.find();
+    console.log("third");
     res.status(200).send(data);
   } catch (error) {
     res.status(400).send({ msg: "there is an error in getting the data" });
