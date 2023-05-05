@@ -9,26 +9,26 @@ app.use(express.json());
 
 app.use("/user", user);
 
-const options = {
-  definition: {
-    openapi: "3.0.0",
-    info: {
-      title: "Hello World",
-      version: "1.0.0",
-    },
-    servers: [{
-        url:"http://localhost:4500" // change
-    }],
-  },
-  apis: ["./routes/*.js"], // change files containing annotations as above
-};
+// const options = {
+//   definition: {
+//     openapi: "3.0.0",
+//     info: {
+//       title: "Hello World",
+//       version: "1.0.0",
+//     },
+//     servers: [{
+//         url:"http://localhost:4500" // change
+//     }],
+//   },
+//   apis: ["./routes/*.js"], // change files containing annotations as above
+// };
 
-const openapiSpecification = swaggerJSDoc(options);
-app.use(
-  "/documentations",
-  swaggerUi.serve,
-  swaggerUi.setup(openapiSpecification)
-);
+// const openapiSpecification = swaggerJSDoc(options);
+// app.use(
+//   "/documentations",
+//   swaggerUi.serve,
+//   swaggerUi.setup(openapiSpecification)
+// );
 
 app.listen(4500, async (req, res) => {
   try {
